@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 cheetah1984
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Nfsd
 - type: roleLoadout
   id: JobCadet
@@ -55,8 +63,8 @@
 - type: roleLoadout
   id: JobBrigmedic
   groups:
-  - TsfmcHead
-  - TsfmcNeck
+  - TsfmcHeadMedic
+  - TsfmcNeckMedic
   - TsfmcJumpsuit
   - TsfmcBrigmedicGloves
   - TsfmcBackpack
@@ -151,6 +159,30 @@
   - ContractorFun
   - SeniorOfficerTrinkets
   - NfsdSpeciesSpecific
-  - TsfmcFirearm
+  - TsfmcFirearmColonel
   - TsfmcMag
+  canCustomizeName: true
+
+- type: roleLoadout
+  id: JobTsfEngineer
+  groups:
+  - TsfmcHeadEngi
+  - TsfmcNeckEngi
+  - TsfmcJumpsuitEngi
+  - TsfmcGloves
+  - TsfmcEngiModsuit
+  - TsfmcOuterClothing
+  - TsfmcShoes
+  - TsfmcFace
+  - TsfmcEngiGlasses
+  - TsfmcUtilBelt
+  - TsfmcEars
+  - NfsdBoxSurvival
+  - TsfEngiPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorEncryptionKey
+  - ContractorFun
+  - ContractorTrinkets
+  - NfsdSpeciesSpecific
   canCustomizeName: true
