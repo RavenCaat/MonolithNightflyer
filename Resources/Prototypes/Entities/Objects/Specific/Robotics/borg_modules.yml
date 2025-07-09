@@ -240,6 +240,57 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
 
+- type: entity
+  id: BorgModuleMercenarySMG
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: mercenary cyborg smg module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    moduleId: Mercenary
+    items:
+    - JawsOfLife
+    - WeaponSubMachineGunCB20rPMC
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+
+  - type: entity
+    id: BorgModuleMercenaryGrenadeLauncher
+    parent: [ BaseBorgModule, BaseProviderBorgModule ]
+    name: mercenary cyborg 40mm Grenade Launcher module
+    components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      moduleId: Mercenary
+      items:
+      - WeaponPistolMercenaryEchis
+      - WeaponLauncherCB-Nadelauncher
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+
+- type: entity
+  id: BorgModuleMercenaryMelee
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: mercenary cyborg melee module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    moduleId: Mercenary
+    items:
+    - CyborgEnergySwordDouble
+    - EnergyShield
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
+
 # cargo modules
 - type: entity
   id: BorgModuleAppraisal

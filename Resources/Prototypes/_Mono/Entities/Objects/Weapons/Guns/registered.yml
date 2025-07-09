@@ -13,6 +13,44 @@
   - type: StaticPrice
     price: 200
 
+#Grenade Launchers
+
+- type: entity
+  name: CB-Nade launcher (40mm)
+  parent: [BaseWeaponLauncher,  BaseC2ContrabandMercenary] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: WeaponLauncherCB-Nadelauncher
+  description: A 6 shot nade Launcher for Mercenary Borgs. It is a modified version of the China Lake, which creates 40mm grenades on the fly from an internal ammo fabricator, which slowly self-charges.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: 40mmGrenadeThermobaric
+    fireCost: 250
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+
 # SMGs
 
 - type: entity #WT-550
@@ -50,6 +88,42 @@
   - type: StaticPrice
     price: 2500
 
+- type: entity
+  name: PMC CB-20r submachine gun (9x19mm)
+  parent: [BaseWeaponSubMachineGun, BaseC2ContrabandMercenary]
+  id: WeaponSubMachineGunCB20rPMC
+  description: A CB-20r that has been properly registered for private security and mercenary use. A fast firing sub-machine gun that was modified for the usage by Cyborgs, from the famous C-20r. Creates 9x19mm on the fly from an internal ammo fabricator, which slowly self-charges.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+  - type: Gun
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: Bullet9x19mmFMJ
+    fireCost: 100
+  - type: Battery
+    maxCharge: 3500
+    startingCharge: 3500
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 77.78 #70
+  - type: AmmoCounter
 # Rifles
 
 - type: entity #Lecter
